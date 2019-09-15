@@ -1,0 +1,159 @@
+/*-----body of the page-----*/
+body {
+	background-color: #EEE9E9;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*-----all anchor tag cssing-----*/
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+/*-----head of title add question-----*/
+.head {
+	width: 75%;
+	padding: 12px;
+	padding-left: 25px;
+	margin-top: 10%;
+	margin-left: 12.50%;
+	margin-right: 12.50%;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 10px 4px -6px #CDC9C9;
+}
+.head p {
+	font-size: 1.60em;
+	font-weight: bold;
+	word-spacing: 5px;
+	letter-spacing: 1px;
+}
+/*-----main containing all-----*/
+.main {
+	width: 75%;
+	margin-top: 3%;
+	margin-left: 12.50%;
+	margin-right: 12.50%;
+	padding-bottom: 1px;
+	border-radius: 5px;
+	padding-right: 28px;
+	padding-left: 28px;
+	background-color: white;
+}
+/*-----heading for choosing option-----*/
+.alpha {
+	padding: 10px;
+	padding-left: 15px;
+}
+.alpha p {
+	padding-top: 10px;
+	font-size: 1.50em;
+	font-weight: bold;
+	word-spacing: 5px;
+	letter-spacing: 1px;
+	padding-bottom: 10px;
+}
+.alpha b {
+	font-size: 1em;
+	font-weight: bold;
+	word-spacing: 2px;
+	letter-spacing: 0.5px;
+}
+/*-----category of the main-----*/
+ #id_choose_topic {
+ 	width: 95%;
+ 	height: 30px;
+ 	border: none;
+ 	margin-left: 20px;
+ 	padding-left: 15px;
+ 	outline: none;
+ 	font-size: 1.47em;
+ 	margin-top: 10px;
+ 	color: white;
+ 	background-color: #C0C0C0;
+ }
+/*-----textarea for the question-----*/
+textarea {
+	/*resize: none;*/
+	scroll-behavior: none;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 97.5%;
+	height: 200px;
+	outline: none;
+	border: 2px solid grey;
+	font-size: 1.30em;
+}
+
+/*-----css for the options to the question-----*/
+.option {
+	width: 100%;
+ 	margin-left: -22px;
+ 	padding-left: 30px;
+ 	margin-top: 10px;
+}
+.answer-text li:nth-child(1) {
+	font-size: 1.35em;
+	padding-top: 8px;
+	padding-left: 15px;
+}
+.answer-text li:nth-child(3) {
+	width: 85%;
+}
+input[type='text'] {
+	border: none;
+	outline: none;
+	width: 100%;
+	font-size: 1.30em;
+	margin-left: 4%;
+	padding: 5px;
+	border-radius: 4px;
+	position: relative;
+	margin-bottom: 15px;
+	background-color: #F4F4F4;
+    resize: both;
+}
+input[type='radio'] {
+	margin-left: 15px;
+	zoom: 1.6;
+    vertical-align: 1px;
+}
+.same {
+	margin-top: 20px;
+	background-color: #DCDCDC;
+}
+.same ul li {
+	list-style: none;
+	display: inline-block;
+}
+/*-----post your question button-----*/
+.addbtn {
+	width: 140px;
+	padding: 9px;
+	margin-top: 10px;
+	margin-left: 20px;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #43CD80;
+	margin-bottom: 30px;
+}
+/*-----hover action on post button*/
+.addbtn:hover {
+	background-color: #00CD66;
+}
+/*-----cssing of anchor post question button-----*/
+.addbtn {
+	font-size: 1.12em;
+	font-weight: 500;
+	color: white;
+    border: none;
+    font-family: fantasy;
+}
+.info {
+	padding-left: 20px;
+	font-size: 1em;
+	font-weight: bold;
+	word-spacing: 2px;
+	letter-spacing: 0.5px;
+}

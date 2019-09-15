@@ -1,0 +1,54 @@
+/*****************
+MEDIA QUERIES
+*****************/
+@media only screen and (max-width: 388px) {
+	.find-people, .friends {
+		margin-left: 19px;
+	}
+	.popup-btn div {
+		display: block;
+	}
+	.cancel {
+		margin-left: 0px;
+	}
+}
+@media only screen and (max-width: 666px) {
+	.search-box, .question-filter-btn {
+		float: none;
+	}
+	.search-box {
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	.question-filter {
+		padding: 12px 25px 12px 25px;
+	}
+	.question-filter-btn ul li {
+		display: block;
+	}
+	.question-filter-btn ul li:nth-child(-n+2) {
+		border-bottom: 1px solid #D1D1D1;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+	.filter-dropicon {
+		float: right;
+	}
+	.filter-dropdown-content1 {
+		right: -10px;
+		top: 35px;
+	}
+	.ask-bgc {
+		width: 100%;
+	}
+
+}
+@media only screen and (max-width: 1100px) {
+	.pop-inner {
+		width: 80%;
+		left: 10%;
+		right: 10%;
+	}
+}

@@ -1,0 +1,397 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+/*------ MAIN NAVABAR-----*/
+.nav-top {
+	background-color: white;
+	height: 100px;
+	padding-top: 35px;
+}
+
+.nav-logo {
+	float: left;
+	font-size: 2.4em;
+	padding-left: 4.5%;
+	margin-top: -8px;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+}
+.nav-logo ul li {
+	display: inline-block;
+}
+.nav-logo ul li a {
+	color: #4F4F4F;
+	font-family: 'Raleway', sans-serif;
+}
+.logo {
+	width: 45px;
+	height: 45px;
+}
+.nav-logo ul li:nth-child(2) {
+	vertical-align: 11px;
+}
+.nav-list1 {
+	float: right;
+	font-size: 1.17em;
+	padding-top: 10px;
+	margin-right: 2.8%;
+	word-spacing: 30px;
+}
+.nav-list1 ul li {
+	display: inline-block;
+}
+.nav-list1 ul li a {
+	color: #707070;
+}
+.nav-list1 ul li a:hover {
+	color: #4F4F4F;
+}
+.nav-list2 {
+	float: right;
+	font-size: 1.17em;
+	padding-top: 10px;
+	padding-right: 1%;
+
+}
+.nav-list2 ul li {
+	display: inline-block;
+	padding-right: 30px;
+}
+.nav-list2 ul li a {
+	color: #00B2EE;
+}
+.nav-list2 ul li a:hover {
+	color: #00CED1;
+}
+
+/* IMAGE BOX CSSING*/
+.background {
+	min-height: 1210px;
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+	background: linear-gradient(to bottom, #00B2EE , #00FA9A);
+}
+.header-text {
+	border-bottom: 2px solid #808A87;
+	position: absolute;
+	top: 5%;
+	left: 4.5%;
+}
+.header-text p {
+	font-size: 2.2em;
+	font-family: "Raleway", sans-serif;
+	color: white;
+	word-spacing: 5px;
+	padding-bottom: 15px;
+}
+.text-box1 {
+	position: absolute;
+	font-size: 3em;
+	width: 50%;
+	top: 200px;
+	padding-left: 4.5%;
+	padding-right: 8%;
+	color: white;
+	word-spacing: 4px;
+	text-align: justify-all;
+}
+.image-box {
+	position: absolute;
+	right: 0px;
+	width: 50%;
+	margin-top: 6%;
+}
+.team-img {
+	height: 520px;
+}
+.text-box2 {
+	position: absolute;
+	font-size: 1.9em;
+	top: 710px;
+	width: 50%;
+	padding-left: 4.5%;
+	padding-right: 8%;
+	color: white;
+	word-spacing: 4px;
+	text-align: justify-all;
+}
+.text-box2 h2 {
+	font-size: 1.5em;
+	padding-bottom: 15px;
+}
+.text-box2 p {
+	font-size: 0.99em;
+	padding-left: 20px;
+	font-family: cursive;
+}
+.form-box {
+	position: absolute;
+	top: 700px;
+	right: 0px;
+	width: 50%;
+	padding-left: 120px;
+}
+/*-----navbar btn css-------*/
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  bottom: 10px;
+  background-color: #00B2EE;
+  opacity: 0.95;
+  display: none;
+}
+.hamburger-box {
+  width: 27px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger-box-resize {
+	width: 240px;
+	height: 240px;
+}
+.hamburger-item {
+	padding-top: 40px;
+	display: none;
+}
+.show {
+	display: block;
+}
+.hamburger-item ul li a{
+	display: block;
+	font-size: 1.8em;
+	font-family: "Raleway", sans-serif;
+	color: #E5E5E5;
+	margin-top: 25px;
+	text-align: center;
+	transition: 0.2s;
+}
+.hamburger-item ul li a:hover {
+	color: white;
+}
+.hamburger-inner {
+  display: block;
+  right: 0px;
+  bottom: 10px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 27px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+.hamburger-inner::before {
+    top: -8px;
+}
+.hamburger-inner::after {
+    bottom: -8px;
+}
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+    transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+    transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.14s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/*-----FORM CSSING---*/
+.form-box ul li{
+	margin-top: 20px;
+}
+.form-box span {
+	color: white;
+	font-size: 1em;
+}
+.form-box span a{
+	color: grey;
+	cursor: pointer;
+}
+.form-box span a:hover {
+	color: 	#616161;
+}
+
+.First, .Last, .Email, .Password, .Submit {
+	width: 80%;
+	line-height: 45px;
+	border: none;
+	font-family: 'Montserrat', sans-serif;
+	outline: ;
+	border-color: #00FA9A;
+	border-radius: 3px;
+	padding-left: 20px;
+	background-color: white;
+}
+.First, .Last, .Email, .Password, .Submit:focus {
+	outline: none;
+}
+.Submit {
+	height: 45px;
+	font-size: 1.12em;
+	color: white;
+	background-color: #00C5CD;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+.Submit:hover {
+	background-color: #00CED1;
+}
+.bottom {
+	background-color: #FCFCFC;
+	position: relative;
+}
+.first-box {
+	background-color: white;
+	width: 43%;
+	height: 275px;
+	border-radius: 2px;
+	box-shadow: 10px 10px 10px -4px #C0C0C0;
+	position: absolute;
+	left: 4.5%;
+	top: -60px;
+}
+.second-box {
+	background-color: white;
+	width: 43%;
+	height: 275px;
+	border-radius: 2px;
+	box-shadow: 10px 10px 10px -4px #C0C0C0;
+	position: absolute;
+	left: 53%;
+	top: -60px;
+}
+
+.upper1 {
+	background-color: #00B2EE;
+	width: 100px;
+	height: 100px;
+	margin-left: -15px;
+	margin-top: 33px;
+	border-radius: 2px;
+}
+.upper2 {
+	background-color: #00CD66;
+	width: 100px;
+	height: 100px;
+	margin-left: -15px;
+	margin-top: 33px;
+	border-radius: 2px;
+}
+.down {
+	background-color: #F5F5F5;
+	margin-top: 85px;
+	text-align: center;
+	padding: 20px;
+
+}
+.down a {
+	font-size: 1.1em;
+	cursor: pointer;
+	color: #00C5CD;
+}
+.down a:hover {
+	color: #00868B;
+}
+/************************************for reviews**********************************/
+.reviews {
+	margin-top: 300px;
+	text-align: center;
+}
+.reviews > h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3em;
+}
+/************************************for quotation**********************************************/
+.quote-main{
+	background-color: #3cba54;
+	margin: 50px 4% 0px 4.5%;
+	position: relative;
+	max-height: 270px;
+}
+.quote-top {
+	margin-top: 50px;
+}
+.inverted {
+  	width: 0;
+  	height: 0;
+  	border-left: 30px solid transparent;
+  	border-right: 30px solid transparent;
+  	border-top: 30px solid white;
+  	position: absolute;
+  	left: 30px;
+  	font-size: 1.2em;
+}
+.fa-quote-left {
+	color: #3cba54;
+	position: absolute;
+	top: -30px;
+	left: -8px;
+}
+.quote-text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	color: white;
+	float: left;
+	text-align: justify-all;
+	width: 50%;
+	padding: 8% 5% 0% 5%;
+}
+.quote-text span {
+	font-size: 1em;
+	word-spacing: 3px;
+}
+.quote-text p {
+	margin-top: 10px;
+	font-size: 0.8em;
+}
+.quote-image-box {
+	float: right;
+	width: 50%;
+}
+.quote-image {
+	height: 270px;
+	width: 100%;
+}

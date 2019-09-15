@@ -1,0 +1,123 @@
+/*-----body of the page-----*/
+body {
+	background-color: #EEE9E9;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*-----all anchor tag cssing-----*/
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.main {
+	width: 62%;
+	margin-top: 8%;
+	margin-left: 6%;
+	float: left;
+	border-radius: 5px;
+	background-color: white;
+}
+
+/*-----First table data in left-----*/
+.one {
+	margin-top: 40px;
+	margin-left: 40px;
+	font-size: 1.12em;
+	font-weight: bold;
+}
+/*-----Second table data in left-----*/
+.two {
+	margin-top: 40px;
+	margin-left: 80px;
+	font-size: 1.1em;
+	letter-spacing: 0.7px;
+}
+.same {
+	display: inline-block;
+}
+/*-----edit account button-----*/
+.editaccount {
+	width: 140px;
+	padding: 9px;
+	margin-top: 40px;
+	margin-left: 40px;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	vertical-align: 35px;
+	background-color: #43CD80;
+	margin-bottom: 40px;
+}
+/*-----hover action on save edit account button*/
+.editaccount:hover {
+	background-color: #00CD66;
+}
+/*-----cssing of anchor edit account-----*/
+.editaccount a {
+	font-size: 1.12em;
+	font-weight: bold;
+	color: white;
+}
+/*-----for line between rows------*/
+.edit-table {
+  border-collapse: collapse;
+}
+.edit-table tr { 
+  border: solid #EAEAEA;
+  border-width: 1px 0;
+}
+.edit-table td {
+	padding-bottom: 30px;
+}
+/*-----save change password button-----*/
+.change {
+	width: 150px;
+	padding: 9px;
+	margin-top: 40px;
+	margin-left: 80px;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	vertical-align: 35px;
+	background-color: #43CD80;
+	margin-bottom: 40px;
+}
+/*-----hover action on save change password button*/
+.change:hover {
+	background-color: #00CD66;
+}
+/*-----cssing of anchor change password text-----*/
+.change a {
+	font-size: 1.12em;
+	font-weight: bold;
+	color: white;
+}
+
+
+/*-------------------------------------------*/
+/*-----css for the sidebar on right side-----*/
+.sidebar {
+	float: right;
+	margin-top: 8%;
+	margin-right: 5%;
+	border-radius: 5px;
+	background-color: #F5F5F5;
+	width: 25%;
+}
+/*-----anchor option of sidebar-----*/
+.sidebar a {
+	padding: 15px;
+	padding-left: 35px;
+	font-size: 1.15em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	display: block;
+	transition: 0.5s;
+	color: #5B5B5B;
+	border-bottom: 1px solid #EAEAEA;
+}
+/*-----hover action on the anchor options-----*/
+.sidebar a:hover {
+	background-color: white;
+	color: #A9A9A9;
+}

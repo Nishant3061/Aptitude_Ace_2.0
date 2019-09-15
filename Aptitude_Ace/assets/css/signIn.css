@@ -1,0 +1,187 @@
+body {
+	background-color: #F2F2F2;
+	font-family: 'Montserrat', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+.nav-top {
+	font-size: 2.5em;
+	padding-top: 27px;
+	background-color: white;
+	min-height: 100px;
+	text-align: center;
+}
+.nav-logo {
+	font-size: 1em;
+	text-align: center;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+}
+.nav-logo ul li {
+	display: inline-block;
+}
+.nav-logo ul li a {
+	color: #4F4F4F;
+	font-family: 'Raleway', sans-serif;
+}
+.logo {
+	width: 45px;
+	height: 45px;
+}
+.nav-logo ul li:nth-child(2) {
+	vertical-align: 11px;
+}
+.container {
+	width: 50%;
+	height: auto;
+	margin: 4%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	border: 1px  solid #C1C1C1;
+}
+.tab-box {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid grey;
+}
+.tab-box a {
+	float: left;
+	color: black;
+	text-align: center;
+}
+.tab {
+	display: block;
+	width: 50%;
+	height: 50px;
+	line-height: 50px;
+	text-transform: uppercase;
+	/*border-top-left-radius: 20px;
+	border-top-right-radius: 20px;*/
+	background-color: #FAFAFA;
+}
+.signin {
+	background-color: white;
+}
+.signup {
+	border: 1px solid #AAAAAA;
+	border-top: 0px;
+	border-right: 0px;
+}
+input {
+	display: block;
+	padding: 5px;
+	color: black;
+	font-size: 1.1em;
+	box-shadow: 0 5px 6px -6px black;
+}
+
+.form-pannel h2 {
+	text-align: center;
+	font-size: 2.5em;
+	letter-spacing: 1px;
+	margin-top: 8%;
+}
+.form-pannel p {
+	text-align: center;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	margin-bottom: 5%;
+	line-height: 25px;
+}
+#id_login, #id_password {
+	border-radius: 4px;
+	height: 40px;
+	width: 80%;
+	word-spacing: 2px;
+	letter-spacing: 0.5px;
+	border: 0.5px solid #EDEDED;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 20px;
+	margin-top: 20px;
+	outline-color: #00B2EE;
+}
+/*css for errors in the form*/
+.errorlist {
+    background-color: rgba(230, 58, 22, 0.95);
+    font-size: 1.1em;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 60px;
+    border-radius: 2px;
+    font-family: sans-serif;
+    padding-top: 4%;
+    padding-right: 2%;
+    padding-left: 3.5%;
+    padding-bottom: 7.5%;
+}
+.btnn {
+	padding: 13px;
+	font-size: 1em;
+	letter-spacing: 2px;
+	text-align: center;
+	background-color: #00B2EE;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	margin: 30px auto 10px auto;
+	width: 190px;
+}
+.forget {
+	color: #00B2EE;
+}
+.forget-pass {
+	text-align: center;
+}
+a:hover.forget {
+	color: #808080;
+}
+.other-head {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	color: grey;
+}
+.line {
+	border-bottom: 1.5px solid lightgrey;
+	width: 80%;
+	margin: 30px auto 0px auto;
+}
+.option p {
+	font-size: 0.999em;
+}
+.option {
+	margin-top: 2%;
+	padding-bottom: 60px;
+}
+.socialProvider {
+    outline: none;
+}
+.option1 {
+	display: inline-block;
+	border: 1px solid #B7B7B7;
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+	min-width: 30%;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.option1 span {
+	padding: 12px;
+	vertical-align: 5px;
+}
+.facebook i {
+	color: #3b5998;
+}
+.google i {
+	color: #d34836;
+}

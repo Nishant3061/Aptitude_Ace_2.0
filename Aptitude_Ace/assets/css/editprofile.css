@@ -1,0 +1,195 @@
+/*-----body of the page-----*/
+body {
+	background-color: #EEE9E9;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*-----all anchor tag cssing-----*/
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+p {
+	letter-spacing: 0.5px;
+}
+/*-----main container of the form------*/
+.edit-main {
+	width: 62%;
+	margin-top: 8%;
+	margin-left: 6%;
+	float: left;
+	border-radius: 5px;
+	background-color: white;
+}
+.edit-table {
+	width: 100%;
+}
+
+/*-----your photo text-----*/
+.yourphoto {
+	margin-left: 40px;
+	margin-top: 60px;
+	font-size: 1.12em;
+	font-weight: bold;
+	cursor: pointer;
+}
+/*-----profile of the ul-----*/
+.profile {
+	margin-top: 30px;
+}
+/*-----profile ul li for photo choose file------*/
+.profile li{
+	display: inline-block;
+}
+/*-----cssing of circular box of photo-----*/
+.photo {
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	border: 4px solid #C1C1C1;
+	margin-left: 50px;
+}
+/*-----button used for choose file-----*/
+.choose {
+	width: 120px;
+	padding: 10px;
+	border: 2px solid #C1C1C1;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	vertical-align: 35px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*-----hover action on choose file button*/
+.choose:hover {
+	border-color: #00CD66;
+}
+/*-----cssing of anchor choose file text-----*/
+.choose a {
+	font-size: 1.12em;
+	font-weight: bold;
+	color: grey;
+}
+/*-----cssing for nofile selected-----*/
+.nofile {
+	vertical-align: 35px;
+}
+/*-----anchor for text nofile selected-----*/
+.nofile a {
+	color: grey;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+/*-----First table data in left-----*/
+.one {
+	margin-top: 40px;
+	margin-left: 40px;
+	font-size: 1.12em;
+	font-weight: bold;
+}
+/*-----Second table data in left-----*/
+.two {
+	margin-top: 30px;
+	margin-left: 50px;
+	background-color: #C1C1C1;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	height: 40px;
+	width: 80%;
+	transition: 0.5s;
+	font-size: 1.5em;
+	font-family: sans-serif;
+	padding: 15px;
+	letter-spacing: 1px;
+}
+.two:focus {
+	background-color: white;
+	border: 1px solid #C1C1C1;
+	border-radius: 4px;
+}
+/*-----for line between rows------*/
+.edit-table {
+  border-collapse: collapse;
+}
+.edit-table tr { 
+  border: solid #EAEAEA;
+  border-width: 1px 0;
+}
+.edit-table td {
+	padding-bottom: 30px;
+}
+/*-----textarea for about you-----*/
+.inpabout {
+	resize: none;
+	overflow: hidden;
+	margin-top: 30px;
+	margin-left: 50px;
+	background-color: #C1C1C1;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	height: 150px;
+	width: 80%;
+	transition: 0.3s;
+	font-size: 1.3em;
+	font-family: sans-serif;
+	letter-spacing: 2px;
+}
+/*-----save changes button-----*/
+.savechanges {
+	width: 140px;
+	padding: 9px;
+	margin-top: 40px;
+	margin-left: 40px;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	vertical-align: 35px;
+	background-color: #43CD80;
+	margin-bottom: 30px;
+}
+/*-----hover action on save changes button*/
+.savechanges:hover {
+	background-color: #00CD66;
+}
+/*-----cssing of anchor choose file text-----*/
+.savechanges a {
+	font-size: 1.12em;
+	font-weight: bold;
+	color: white;
+}
+
+
+
+
+
+/*-------------------------------------------*/
+/*-----css for the sidebar on right side-----*/
+.sidebar {
+	float: right;
+	margin-top: 8%;
+	margin-right: 5%;
+	border-radius: 5px;
+	background-color: #F5F5F5;
+	width: 25%;
+}
+/*-----anchor option of sidebar-----*/
+.sidebar a {
+	padding: 15px;
+	padding-left: 35px;
+	font-size: 1.15em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	display: block;
+	transition: 0.5s;
+	color: #5B5B5B;
+	border-bottom: 1px solid #EAEAEA;
+}
+/*-----hover action on the anchor options-----*/
+.sidebar a:hover {
+	background-color: white;
+	color: #A9A9A9;
+}

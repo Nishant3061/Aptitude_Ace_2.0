@@ -1,0 +1,129 @@
+/*****************
+MEDIA QUERIES
+*****************/
+
+@media only screen and (max-width: 405px) {
+	#search-input {
+		font-size: 1.1em;
+	}
+	.filter-dropdown {
+		font-size: 1em;
+	}
+	.oval {
+		height: 30px;
+		line-height: 50%;
+		margin-top: 2px;
+	}
+	.bookmark-circle {
+		width: 32px;
+		height: 32px;
+		line-height: 29px;
+	}
+	.hint-text, .hint-btn {
+		float: none;
+	}
+	.hint-btn {
+		margin: 5px 0px 5px 0px;
+		height: 30px;
+		line-height: 28px;
+	}
+	.main-question {
+		font-size: 1.2em;
+	}
+	.option {
+		padding: 8px 2% 15px 2.6%;
+	}
+	.option-number {
+		width: 30px;
+		height: 30px;
+		line-height: 25px;
+		font-size: 1.3em;
+	}
+	.option-text {
+		font-size: 1.05em;
+		margin-top: 5.2px;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.filter-block {
+		padding: 20px;
+		padding-top: 11px;
+	}
+	.filter-dropdown, .filter-left {
+		display: block;
+		text-align: justify;
+	}
+	.filter-right, .filter-left {
+		float: none;
+	}
+	#filter-angle {
+		float: right;
+	}
+	.f-d-1, .f-d-2, .filter-left {
+		margin-right: 0px;
+		border-bottom: 1px solid #E5E5E5;
+		margin: 10px 0px 10px 0px;
+		padding-bottom: 10px;
+	}
+	input[name = 'searchInput'] {
+	min-width: 215px;
+	font-size: 1.2em;
+	margin-left: 2px;
+	}
+	#filter-searchicon {
+		font-size: 1.1em;
+	}
+	.filter-dropdown-content {
+		right: 10px;
+	}
+	.filter-dropdown-content1 {
+		top: 15px;
+	}
+	.filter-dropdown-content2 {
+		top: 55px;
+	}
+	.filter-dropdown-content3 {
+		top: 95px;
+	}
+	.footer {
+		min-height: 255px;
+	}
+	.footer-component {
+		display: block;
+	}
+	.footer-ul-text > li {
+		display: block;
+		padding-bottom: 10px;
+	}
+	.footer-icons {
+		margin-top: 7px;
+	}
+	.footer-text {
+		margin-left: 0px;
+		margin-top: 22px;
+	}
+	.footer-copy {
+		float: none;
+		margin-top: 22px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: bold;
+	}
+
+
+}
+@media only screen and (max-width: 850px) {
+	.score-block {
+		display: none;
+	}
+	.short-score-block {
+		display: block;
+	}
+
+}
+@media only screen and (max-width: 1076px) {
+	.sc-first, .sc-second, .sc-third, .sc-fourth {
+		margin-right: 5%;
+	}
+
+}

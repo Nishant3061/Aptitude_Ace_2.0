@@ -1,0 +1,40 @@
+/**********************
+MEDIA QUERIES
+**********************/
+
+@media only screen and (min-width: 0px) {
+	.container {
+		width: 90%;
+	}
+	.option1 {
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.nav-logo {
+	font-size: .8em;
+	margin-top: 3px;
+	}
+	.logo {
+		width: 40px;
+		height: 40px;
+	}
+	.nav-logo ul li:nth-child(2) {
+		vertical-align: 9px;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.container {
+		width: 70%;
+	}
+	.option1 {
+		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: 1090px) {
+	.container {
+		width: 50%;
+	}
+}

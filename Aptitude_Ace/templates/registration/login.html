@@ -18,7 +18,7 @@
     <div class="container">
         <div class="tab-box">
             <a href="#" class="signin tab"> Sign In </a>
-            <a href="#" class="signup tab"> Sign Up </a>
+            <a href="{% url 'signup' %}" class="signup tab"> Sign Up </a>
         </div>
         <div class="form-pannel">
             <div class="signin-box">
@@ -50,7 +50,7 @@
               </form>
 
               {# Assumes you setup the password_reset view in your URLconf #}
-              <a href="{% url 'password_reset' %}" class="forget"><p class="forget-pass">Forget your password?</p></a>
+              <a href="{% url 'password_reset' %}" class="forget"><p class="forget-pass">Forgot your password?</p></a>
 
 
                 <div class="line"></div>

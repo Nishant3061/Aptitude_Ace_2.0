@@ -1,0 +1,52 @@
+{% extends "registration/base.html" %}
+
+{% load static from staticfiles %}
+
+
+{% block head_title %} Signup {% endblock %}
+
+{% block style_extra %}
+    <link href="{% static 'css/signUp.css' %}" rel="stylesheet">
+	<link href="{% static 'css/signMedia.css' %}" rel="stylesheet">
+{% endblock style_extra %}
+
+{% block content %}
+<section class="main-container">
+	<div class="container">
+		<div class="tab-box">
+			<a href="{% url 'login' %}" class="signin tab">Sign In</a>
+			<a href="#" class="signup tab">Sign Up</a>
+		</div>
+		<div class="form-pannel">
+
+			<div class="signup-box">
+				<form class="signupform" method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+					<h2>Create Your Student Account</h2>
+					<p>Your student account is your portal to all things AptitudeAce</p>
+          <input type="text" name="first_name" value="" id="id_first_name" placeholder="Your first name" required autofocus>
+          <input type="text" name="last_name" value="" id="id_last_name" placeholder="Your last name" required>
+          <input type="email" name="email" value="" id="id_email" placeholder="Your email address" required>
+          <input type="password" name="password" value="" id="id_password1" placeholder="Password" required>
+
+					<input type="submit" value="SIGN UP" class="btnn" >
+				</form>
+
+				<div class="line"></div>
+				<div class="option">
+					<p>or sign in with one of these services</p>
+					<article class="other-head">
+						<div class=" facebook option1">
+							<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i><span>Facebook</span>
+						</div>
+						<div class=" google option1">
+							<i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i><span>Google+</span>
+						</div>
+					</article>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

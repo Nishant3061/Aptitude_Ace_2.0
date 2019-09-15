@@ -84,7 +84,7 @@
 					</a>
 					<a href="#">Bookmarks</a>
 					<a href="#">Account Settings</a>
-					<a class="navbar-dropdown-content-signout" href="#">Sign Out</a>
+					<a class="navbar-dropdown-content-signout" href="{% url 'logout'%}?next={{request.path}}">Sign Out</a>
     			</div>
 				<li><a><img src="{% static 'img/angle-arrow-down.svg' %}" class="arrow-image profilehover"></a></li>
 				<li class="set6"><a><img src="{% static 'img/notifications-button.svg' %}" class="notification-image"></a></li>
@@ -110,7 +110,7 @@
 							</a>
 							<a>Bookmarks</a>
 							<a>Account Settings</a>
-							<a class="navbar-dropdown-content-signout">Sign Out</a>
+							<a class="navbar-dropdown-content-signout" href="{% url 'logout'%}?next={{request.path}}">Sign Out</a>
     					</div>
 					</li>
 					<li>
@@ -141,7 +141,7 @@
 					<a>Bookmarks</a>
 					<a>Notifications</a>
 					<a>Settings</a>
-					<a>Sign Out</a>
+					<a href="{% url 'logout'%}?next={{request.path}}">Sign Out</a>
   				</div>
 			</div>
 		<!--Navbar menu ends -->

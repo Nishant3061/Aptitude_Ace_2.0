@@ -93,7 +93,7 @@ input {
 	margin-bottom: 5%;
 	line-height: 25px;
 }
-#id_login, #id_password {
+#id_username, #id_password {
 	border-radius: 4px;
 	height: 40px;
 	width: 80%;

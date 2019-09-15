@@ -1,0 +1,190 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    {# Place icon files in the root if possible (let browsers look for them where they expect them to be) #}
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'apple-touch-icon-144x144-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'apple-touch-icon-114x114-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'apple-touch-icon-72x72-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'apple-touch-icon-precomposed.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'apple-touch-icon-precomposed.png' %}">
+
+    {# Tile icon for Win8 (144x144 + tile color) #}
+    <meta name="msapplication-TileImage" content="{% static 'metro-icon-144x144-precomposed.png' %}"><!-- white shape -->
+    <meta name="msapplication-TileColor" content="#3673a5"><!-- python blue -->
+    <meta name="msapplication-navbutton-color" content="#3673a5">
+
+    {# Theme color on android #}
+    <meta name="theme-color" content="#3673a5">
+
+    <title>{% block head_title %}{{ SITE_INFO.site_name }}{% endblock head_title %}</title>
+    <meta property="og:title" content="{% block og_title %}{{ SITE_INFO.site_name }}{% endblock %}">
+
+
+    {# concatenate and minify for production #}
+    <link href="{% static 'css/reset.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    {# personal stylesheet #}
+    {% block style_extra %} {% endblock style_extra %}
+    <link href="{% static 'css/navbar.css' %}" rel="stylesheet">
+	<link href="{% static 'css/footer.css' %}" rel="stylesheet">
+
+    {# google fonts link #}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    {# google font awsome icon link #}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    {% block endhead %}
+    {% endblock %}
+
+</head>
+
+<body>
+	<!-- Navigation bar -->
+	<div class="navBar">
+		<div class="navBar-left">
+			<ul class="navBar-ul">
+				<li><a href="{% url 'home' %}"><img src="{% static 'img/ace-of-spades.svg' %}" alt="ace-of-spades" class="logo logohover"></a></li>
+				<li class="navBar-text-item set1"><a href="{% url 'home' %}" id="home-btn" class="logohover">Home</a></li>
+				<li class="navBar-line-item set2"><a><p class="pipe">|</p></a></li>
+				<li class="navBar-text-item set3"><a href="#">Formula & tricks<a></li>
+				<li class="navBar-text-item set3"><a href="leaderboards.html">Leaderboards</a></li>
+				<li class="navBar-text-item set3"><a href="#">Community</a></li>
+				<li class="navBar-text-item "><a href="#">Support</a></li>
+			</ul>
+		</div>
+		<div class="navBar-right">
+			<ul class="navBar-ul right-ul">
+        <li class="navBar-text-item set4 hide"><a href="#"><p class="add-ques">Add Questions</p></a></li>
+				<li class="navBar-line-item set5"><a><p class="pipe">|</p></a></li>
+				<li class="navBar-text-item profilehover theScore"><a href="#" id="currentScore">{{total_score}}</a></li>
+				<li>
+					<a><div class="user profilehover"></div></a>
+				</li>
+				<div class="arrow_box"></div>
+				<div class="navbar-dropdown-content">
+					<a class="navbar-dropdown-content-userprofile" href="#">
+						{{ user.first_name }} {{ user.last_name }}
+						<p class="navbar-dropdown-content-para">View Profile</p>
+					</a>
+					<a href="#">Bookmarks</a>
+					<a href="#">Account Settings</a>
+					<a class="navbar-dropdown-content-signout" href="#">Sign Out</a>
+    			</div>
+				<li><a><img src="{% static 'img/angle-arrow-down.svg' %}" class="arrow-image profilehover"></a></li>
+				<li class="set6"><a><img src="{% static 'img/notifications-button.svg' %}" class="notification-image"></a></li>
+			</ul>
+		</div>
+		<!--Media query navBar -->
+		<div class="navBar-alternate">
+			<div class="navBar-btn nav-alt-item">
+				<span class="menu-btn-icon" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+			</div>
+			<div class="nav-alt-item">
+				<a href="#"><img src="{% static 'img/ace-of-spades.svg' %}" alt="ace-of-spades" class="logo logohover"></a>
+			</div>
+			<div class="navBar-aside nav-alt-item">
+				<ul>
+					<li>
+						<a><div class="user profilehover sideuser"></div></a>
+						<div class="arrow_box"></div>
+						<div class="navbar-dropdown-content">
+							<a class="navbar-dropdown-content-userprofile">
+								Nishant Raj
+								<p class="navbar-dropdown-content-para">View Profile</p>
+							</a>
+							<a>Bookmarks</a>
+							<a>Account Settings</a>
+							<a class="navbar-dropdown-content-signout">Sign Out</a>
+    					</div>
+					</li>
+					<li>
+						<a><img src="{% static 'img/angle-arrow-down.svg' %}" class="arrow-image profilehover"></a>
+					</li>
+					<li>
+						<a><img src="{% static 'img/notifications-button.svg' %}" class="notification-image"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--Media query navBar ends -->
+		<!--Navbar menu -->
+			<div id="myNav" class="overlay">
+  				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times fa-1x" aria-hidden="true"></i></a>
+  				<div class="overlay-content">
+   					<a><img src="{% static 'img/ace-of-spades.svg' %}" alt="ace-of-spades" class="logo logohover"></a>
+					<a>Home</a>
+					<a>Formula & tricks</a>
+					<a>Leaderboards</a>
+					<a>Community</a>
+					<a>Support</a>
+					<hr style="width: 45%; margin-left: 28%">
+					<a>Add Questions</a>
+					<hr style="width: 45%; margin-left: 28%">
+					<a id="media-theScore">{{total_score}}</a>
+					<a>View Profile</a>
+					<a>Bookmarks</a>
+					<a>Notifications</a>
+					<a>Settings</a>
+					<a>Sign Out</a>
+  				</div>
+			</div>
+		<!--Navbar menu ends -->
+	</div>
+	<!--Navigation bar ends -->
+
+    <!-- Page Header -->
+    {% block header %}
+    {% endblock %}
+
+    <!-- Page Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!--footer starts -->
+		<div class="footer">
+			<div class="footer-icons footer-component">
+				<ul class="footer-ul">
+					<li><a><i class="fa fa-facebook" aria-hidden="true" id="fb-icon"></i></a></li>
+					<li><a><i class="fa fa-twitter" aria-hidden="true" id="twitter-icon"></i></a></li>
+					<li><a><i class="fa fa-instagram" aria-hidden="true" id="instagram-icon"></i></a></li>
+					<li><a><i class="fa fa-linkedin" aria-hidden="true" id="linkedin-icon"></i></a></li>
+				</ul>
+			</div>
+			<div class="footer-text footer-component">
+				<ul class="footer-ul footer-ul-text">
+					<li><a href="#">About AptitudeAce</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div class="footer-copy footer-component"><span> & copy 2017 AptitudeAce, Inc.</span></div>
+		</div>
+
+	<!--footer ends -->
+    <script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+    {% block script_extra %}{% endblock %}
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/footer.js' %}"></script>
+
+
+</body>
+</html>

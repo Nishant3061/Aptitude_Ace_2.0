@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{# personal stylesheet #}
+{% block style_extra %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homeMedia.css' %}">
+{% endblock style_extra %}
+
+{% block content %}
+
+<!--Home text starts -->
+
+<div>
+    <p class="home-text">Home</p>
+</div>
+
+<!--Home text ends -->
+<!--Score block -->
+
+<div class="score-block">
+    <h5>Your overall score card</h5>
+    <div class="score-container sc-first">
+        <div class="score-block-round long-text"><span style="color: red;">{{no_of_attempt}}</span></div>
+        <span>Questions attempt</span>
+    </div>
+    <div class="score-container sc-second">
+        <div class="score-block-round"><span style="color: green;">{{no_of_solved}}</span></div>
+        <span>Total Correct</span>
+    </div>
+    <div class="score-container sc-third">
+        <div class="score-block-round"><span style="color: blue;">{{total_score}}</span></div>
+        <span>Score</span>
+    </div>
+    <div class="score-container sc-fourth">
+        <div class="score-block-round"><span style="color: orange;">???</span></div>
+        <span>All time best</span>
+    </div>
+    <div class="score-container sc-fifth">
+        <div class="score-block-round"><span style="color: pink;">{{league_level}}</span></div>
+        <span>League level</span>
+    </div>
+</div>
+
+<!--Score block ends -->
+
+<!-- media query score-block -->
+    <div class="short-score-block">
+        <div class="short-score-block-head"><h5>Your overall score card</h5></div>
+        <div class="short-score-container">
+            <span>Questions attempt:</span>
+            <span>{{no_of_attempt}}</span>
+        </div>
+        <div class="short-score-container">
+            <span>Total Correct:</span>
+            <span>{{no_of_solved}}</span>
+        </div>
+        <div class="short-score-container">
+            <span>Score:</span>
+            <span>{{total_score}}</span>
+        </div>
+        <div class="short-score-container">
+            <span>All time best:</span>
+            <span>???</span>
+        </div>
+        <div class="short-score-container">
+            <span>League level:</span>
+            <span>Gold</span>
+        </div>
+    </div>
+<!-- media query score-block ends -->
+
+<!--recent-ques text starts -->
+
+<div>
+    <p class="recent-ques-text">Recent Questions</p>
+</div>
+
+<!--recent-ques text ends -->
+
+<!--Filter button(with dropdown) -->
+
+<div class="filter-block">
+    <div class="filter-left">
+        <i class="fa fa-search" aria-hidden="true" id="filter-searchicon"></i>
+        <input type="text" name="searchInput" placeholder="Search question by keyword" id="search-input">
+    </div>
+    <div class="filter-right">
+        <div class="filter-dropdown f-d-1">
+            <span class="filter-hover">Newest <i class="fa fa-angle-down" aria-hidden="true" id="filter-angle"></i></span>
+            <div class="filter-dropdown-content filter-dropdown-content1">
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Newest</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Oldest</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Alphabetical</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Difficulty</a>
+            </div>
+        </div>
+        <div class="filter-dropdown f-d-2">
+            <span class="filter-hover">All Types <i class="fa fa-angle-down" aria-hidden="true" id="filter-angle"></i></span>
+            <div class="filter-dropdown-content filter-dropdown-content2">
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> All Types</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Unsolved</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Solved</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Most Liked</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> Max attempt</a>
+            </div>
+        </div>
+        <div class="filter-dropdown f-d-3">
+            <span class="filter-hover">All Topics <i class="fa fa-angle-down" aria-hidden="true" id="filter-angle"></i></span>
+            <div class="filter-dropdown-content filter-dropdown-content3">
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> All Topics</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #B0171F;"></i> Addition</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #FF82AB"></i> Multiplication</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #8B475D;"></i> Division</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #8B8386;"></i> Divisiblilty</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #DA70D6;"></i> Average</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #8B4789;"></i> Square & Cubes</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #DDA0DD;"></i> HCF & LCM</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #FF00FF;"></i> Fraction</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #2E8B57;"></i> Decimal Fraction</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #00C957;"></i> Elementry Algebra</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #006400;"></i> Surds</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #EE9A00;"></i>Number System</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #8B4500;"></i> Binary System</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #D2691E;"></i> Permutation & Com..</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #EE4000;"></i> Ratio & Proportion</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #00CDCD;"></i> Percentage</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #808000;"></i> Profit & Loss</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #E3CF57;"></i> Simple Interest</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #EE4000;"></i>Compound Interest</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #CD0000;"></i> Alligation & Mixture</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #8B0000;"></i> Partnership</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #800000;"></i> Ages</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #8E388E;"></i> Time, Work & Wages</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #7171C6;"></i> Time & Distance</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #7D9EC0;"></i> Trains & Streams</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #388E8E;"></i>Mensuration</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #71C671;"></i> Series</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #8E8E38;"></i> Trigonometry</a>
+                <a> <i class="fa fa-check" aria-hidden="true" id="filter-checkicon"></i> <i class="fa fa-circle" aria-hidden="true" id="filter-doticon" style="color: #C67171;"></i> Probability</a>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+<!--Filter button ends -->
+
+{% for q in questions %}
+
+<!--Question block -->
+<div class="question-block">
+    <div class="user-info" style="background: {{q.get_color}}">
+        <a><div class="user-info-dp"></div></a>
+        <ul class="user-info-text">
+            <li><a href="#"><span class="user-info-name">{{q.get_uploader_name}}</span></a></li>
+            <li><a href="#"><span class="user-info-duration">{{q.date_created|timesince}}</span></a></li>
+        </ul>
+    </div>
+    <div class="question-box">
+        <p class="question-header">Question:</p>
+        <p class="main-question">
+            {{q.question_text}}
+        </p>
+        <ul class="question-tags">
+            <li><div class="oval category" style="border-color: {{q.get_color}}; color: {{q.get_color}}"><span>{{q.get_topic_name}}</span></div></li>
+            <li><div class="oval"><span>unsolved</span></div></li>
+            <li class="bookmark">
+                <a>
+                    <div class="bookmark-text bookmark-hover">
+                        <span>Bookmark</span>
+                    </div>
+                    <div class="arrow-down bookmark-hover"></div>
+                    <div class="bookmark-circle">
+                        <i class="fa fa-star"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="hint">
+        <p class="hint-text hint-text-{{q.id}}">Choose the correct answer below:</p>
+        <a href="#"><div class="hint-btn" style="background-color: {{q.get_color}}"><span>Get Help</span></div></a>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="multi-options">
+        <ul id="{{q.id}}">
+            <li>
+                <div class="option">
+                    <div class="option-number"><span>A</span></div>
+                    <p class="option-text">{{q.option1}}</p>
+                </div>
+            </li>
+            <li>
+                <div class="option">
+                    <div class="option-number"><span>B</span></div>
+                    <p class="option-text">{{q.option2}}</p>
+                </div>
+            </li>
+            <li>
+                <div class="option">
+                    <div class="option-number"><span>C</span></div>
+                    <p class="option-text">{{q.option3}}</p>
+                </div>
+            </li>
+            <li>
+                <div class="option">
+                    <div class="option-number"><span>D</span></div>
+                    <p class="option-text">{{q.option4}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="user-event">
+        <ul class="user-event-ul">
+            <li class="like"><a><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like</a></li>
+            <li class="share"><a><i class="fa fa-share" aria-hidden="true"></i> Share</a></li>
+            <li class="report"><a><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Report question</a></li>
+        </ul>
+    </div>
+</div>
+<!--question block ends -->
+
+{% endfor %}
+
+{% endblock %}
+
+{% block script_extra %}
+    <script src="{% static 'js/home.js' %}">
+    </script>
+    <script type="text/javascript">
+
+        $(".option").click(function () {
+
+            var current = $(this);
+            var choosenOption = current.find('p').text();
+            var q_id = current.closest('ul').attr('id');
+            var textChanger = 'hint-text-' + q_id;
+
+            // console.log(choosenOption);
+            // console.log(q_id);
+
+            $.ajax({
+                url: '/home/check_answer/',
+                data: {
+                    'choosenOption': choosenOption,
+                    'q_id': q_id,
+                },
+                dataType: 'json',
+                success: function (data) {
+                    if (data.is_correct) {
+                        current.css("background-color", "green");
+                        $('.'+textChanger).text("Congratulations, You have answered correctly.").css("color", "green");
+
+                    } else {
+                        current.css("background-color", "#CD0000");
+                        $('.'+textChanger).text("Oops, It seems you need more practice!!!").css("color", "red");
+                        mark_correct_option(data.correct_option, q_id, current);
+                    }
+                    current.closest(".multi-options").addClass("disabling");
+                    current.css("color", "white");
+                    $(".score-block").load(location.href+" .score-block>*","");
+                    $(".short-score-block").load(location.href+" .short-score-block>*", "");
+                    $(".theScore").load(location.href+" .theScore>*", "");
+                }
+            });
+        });
+        function mark_correct_option(correct_option, q_id, current) {
+            for (var i = 0; i < 4; i++) {
+                if($("#"+q_id).find('p').eq(i).text() === correct_option){
+                    $("#"+q_id).find(".option").eq(i).css("background-color", "green");
+                    $("#"+q_id).find(".option").eq(i).css("color", "white");
+                }
+            }
+        }
+
+    </script>
+{% endblock %}

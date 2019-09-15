@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block style_extra %}
+    <link rel="stylesheet" href="{% static 'css/addquestion.css' %}">
+{% endblock style_extra %}
+
+{% block content %}
+<div class="head">
+    <p>Add Your Questions Here</p>
+</div>
+
+<div class="main">
+
+    <form class="" action="" method="post">
+        {% csrf_token %}
+
+    <div class="category">
+            <div class="option_heading alpha">
+                <p>Choose Category<span>*</span></p>
+                <b>Opt the category of the question you wants to post.</b>
+            </div>
+            {{form.choose_topic}}
+    </div>
+    <hr>
+
+    <div class="question alpha">
+        <p>Your Question<span>*</span></p>
+        <b>Post your question below with accuracy and uniqueness.</b>
+        {{form.question_text}}
+    </div>
+    <hr>
+
+    <div class="answer alpha">
+        <p>Your Answer<span>*</span></p>
+        <b>Depict your answers and check mark only in correct one.</b>
+        <div class="option">
+
+                <div class="optiona same">
+                    <ul class="answer-text">
+                        <li><p>A</p></li>
+                        <li>
+                            <input type="radio" name="correct-option" value="option1" required  />
+                        </li>
+                        <li>{{form.optionA}}</li>
+                    </ul>
+                </div>
+                <div class="optionb same">
+                    <ul class="answer-text">
+                        <li><p>B</p></li>
+                        <li>
+                            <input type="radio" name="correct-option" value="option2"/>
+                        </li>
+                        <li>{{form.optionB}}</li>
+                    </ul>
+                </div>
+                <div class="optionc same">
+                    <ul class="answer-text">
+                        <li><p>C</p></li>
+                        <li>
+                            <input type="radio" name="correct-option" value="option3"/>
+                        </li>
+                        <li>{{form.optionC}}</li>
+                    </ul>
+                </div>
+                <div class="optiond same">
+                    <ul class="answer-text">
+                        <li><p>D</p></li>
+                        <li>
+                            <input type="radio" name="correct-option" value="option4"/>
+                        </li>
+                        <li>{{form.optionD}}</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="hint alpha">
+        <p>Add Solution</p>
+        <b>Append some hints/solution for the posted question</b>
+        {{form.solution_text}}
+    </div><hr>
+
+    <p class="info">Asterisk <span>*</span> Marks fields are mandatory.</p>
+
+    <input type="submit" name="" value="Post Question" class="addbtn">
+
+</form>
+</div>
+{% endblock content %}

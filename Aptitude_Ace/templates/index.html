@@ -1,1 +1,83 @@
 {% extends 'layout.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+    <div class="background">
+        <div class="header-text">
+            <p>JOIN THE APTITUDE COMMUNITY</p>
+        </div>
+        <div class="text-box1">
+            <p>Accredit AptitudeAce to improve your aptitude virtuosity and accelerate your career.</p>
+        </div>
+
+        <div class="image-box">
+            <img src="{% static 'img/team.png' %}" class="team-img">
+        </div>
+
+        <div class="text-box2">
+             <h2>Formulate yourself for prime aptitude exams.</h2>
+             <p>Placement Aptitude</p>
+             <p>CAT MAT XAT</p>
+             <p>Banking and Many more...</p>
+        </div>
+
+        <div class="form-box">
+            <ul>
+                <li><input type="text" class="First" placeholder="First Name"></li>
+                <li><input type="text" class="Last" placeholder="Last Name"></li>
+                <li><input type="email" class="Email" placeholder="Email"></li>
+                <li><input type="password" class="Password" placeholder="Password"></li>
+                <li><input type="checkbox" class="Checkbox" checked="checked"><span> I agree to the <a> Terms of Service</a></span></li>
+                <li><input type="submit" class="Submit" value="CREATE A FREE ACCOUNT"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="first-box">
+            <article class="upper1">
+            </article>
+            <article class="down">
+                <a>EXPLORE OUR PROGRAM</a>
+            </article>
+        </div>
+
+        <div class="second-box">
+            <article class="upper2">
+            </article>
+            <article class="down">
+                <a>SEE OUR COURSES</a>
+            </article>
+        </div>
+    </div>
+
+    <div class="reviews"><h1>Some Reviews</h1></div>
+
+    <div class="quote-main quote-top">
+        <div class="inverted"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+        <div class="quote-text"><span>Being a AptitudeAce student is one the best decisions I’ve made for my career.</span>
+        <p>--- Virat Kholi, AptitudeAce Student</p></div>
+        <div class="quote-image-box">
+            <img src="{% static 'img/quote.jpg' %}" alt="quote image" class="quote-image">
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="quote-main">
+        <div class="inverted"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+        <div class="quote-text"><span>Being a AptitudeAce student is one the best decisions I’ve made for my career.</span>
+        <p>--- Virat Kholi, AptitudeAce Student</p></div>
+        <div class="quote-image-box">
+            <img src="{% static 'img/quote.jpg' %}" alt="quote image" class="quote-image">
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="quote-main">
+        <div class="inverted"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+        <div class="quote-text"><span>Being a AptitudeAce student is one the best decisions I’ve made for my career.</span>
+        <p>--- Virat Kholi, AptitudeAce Student</p></div>
+        <div class="quote-image-box">
+            <img src="{% static 'img/quote.jpg' %}" alt="quote image" class="quote-image">
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+{% endblock %}

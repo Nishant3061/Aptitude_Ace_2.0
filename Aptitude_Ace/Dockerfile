@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN chmod  -R 777 /usr/src/app
+
 EXPOSE 8000
 
 ENTRYPOINT [ "python",  "manage.py" ]

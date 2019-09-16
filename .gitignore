@@ -1,5 +1,1 @@
 .venv/
-
-*__pycache__*
-Aptitude_Ace/db.sqlite3
-*initial.py

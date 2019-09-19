@@ -96,9 +96,10 @@ def check_answer(request):
 
 def scoreUpdate(q_id, request, is_correct):
     current_user = request.user.id
-    is_exists = Action.objects.filter(user_id=current_user)
-    is_exists = is_exists.filter(question_id=q_id)
-    if is_exists.exists() is False:
+    current_user_actions = Action.objects.filter(user_id=current_user)
+    action_on_given_question = current_user_actions.filter(question_id=q_id)
+    acted_on_given_question = action_on_given_question.exists()
+    if not acted_on_given_question:
         if is_correct:
             a = Action(
                 solved=True,

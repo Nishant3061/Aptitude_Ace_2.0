@@ -73,11 +73,8 @@ def get_league_level(current_user):
 
 
 # function to count
-def to_count(current_user_attempt):
-    if current_user_attempt.exists():
-        return current_user_attempt.count()
-    else:
-        return "---"
+def to_count(user_actions):
+    return user_actions.count() if user_actions.exists() else "---"
 
 
 @login_required

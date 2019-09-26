@@ -3,9 +3,10 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.db.models import Max
-from home.models import Action, Question
-from home.views import get_total_score
 
+from home.models import Action
+from .models import Question
+from home.views import get_total_score
 from .forms import AddQuestionForm
 
 
@@ -20,6 +21,8 @@ def addQuestion(request):
         form = AddQuestionForm(request.POST)
 
         q_id = Question.objects.aggregate(Max('id'))
+        if q_id['id__max'] is None:
+            q_id['id__max'] = 0
 
         if form.is_valid():
             correct_option = request.POST.get('correct-option')

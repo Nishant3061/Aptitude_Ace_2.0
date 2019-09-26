@@ -33,6 +33,4 @@ class Action(models.Model):
     Last_action_date = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
-        name = self.user.first_name
-        question_text = self.question.question_text[:100]
-        return "%s--%s..." % (name, question_text)
+        return f'{self.user.first_name}--{self.question.question_text[:100]}'

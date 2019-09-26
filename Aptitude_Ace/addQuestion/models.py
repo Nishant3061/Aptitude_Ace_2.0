@@ -11,7 +11,7 @@ class QuestionsTopic(models.Model):
     color = models.CharField(max_length=10, default="black")
 
     def __str__(self):
-        return "%s" % (self.topic_name)
+        return f'{self.topic_name}'
 
 
 class Question(models.Model):
@@ -41,19 +41,19 @@ class Question(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "%s..." % (self.question_text[:200])
+        return f'{self.question_text[:200]}...'
 
     def get_uploader_name(self):
         uploader_obj = User.objects.get(id=self.user_id)
-        return "%s %s" % (uploader_obj.first_name, uploader_obj.last_name)
+        return f'{uploader_obj.first_name} {uploader_obj.last_name}'
 
     def get_topic_name(self):
         temp = QuestionsTopic.objects.get(id=self.topic_id)
-        return "%s" % (temp.topic_name)
+        return f'{temp.topic_name}'
 
     def get_color(self):
         temp = QuestionsTopic.objects.get(id=self.topic_id)
-        return "%s" % (temp.color)
+        return f'{temp.color}'
 
     class Meta:
         ordering = ('-date_created',)
